@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 const Formulario = ({guardarBusquedaLetra}) => {
   const [busqueda, guardarBusqueda] = useState({
@@ -86,5 +87,9 @@ const Formulario = ({guardarBusquedaLetra}) => {
     </div>
   );
 };
+
+Formulario.propTypes = {
+  guardarBusquedaLetra: PropTypes.func.isRequired
+}
 
 export default Formulario;
